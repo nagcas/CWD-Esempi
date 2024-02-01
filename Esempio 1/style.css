@@ -1,0 +1,153 @@
+/* 
+    Utilizzo di position relative e absolute
+    transition
+    transform
+    data: 01.02.2024
+*/
+
+
+/* CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* -------------------- end */
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: aqua;
+    border-radius: 20px;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.8);
+}
+
+.card {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    
+}
+
+.content {
+    position: absolute;
+    padding: 20px;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s ease-in-out;
+}
+
+.content h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.content h3 {
+    margin-top: 10px;
+}
+
+.card:hover {
+    /* display: none; */
+    background-image: url("https://www.focus.it/images/2021/11/23/mare_1020x680.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff; 
+    opacity: 0.8; 
+}
+
+.titolo1 {
+    position: absolute;
+    background-color: cadetblue;
+    top: 10px;
+    left: -80px;
+    padding: 15px;
+    border-radius: 20px;
+    opacity: 0.8;
+    transition: left 0.3s ease-in-out;
+    text-transform: capitalize;
+} 
+
+.titolo1:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.card:hover .titolo1 {
+    left: 10px;
+}
+
+.titolo2 {
+    position: absolute;
+    background-color: cadetblue;
+    top: -50px;
+    right: 10px;
+    padding: 15px;
+    border-radius: 20px;
+    opacity: 0.8;
+    transition: top 0.3s ease-in-out;
+    text-transform: capitalize;
+}
+
+.card:hover .titolo2 {
+    top: 10px;
+}
+
+.footer {
+    position: absolute;
+    background-color: cadetblue;
+    bottom: -50px;
+    right: 10px;
+    padding: 15px;
+    border-radius: 20px;
+    opacity: 0.8;
+    transition: bottom 0.3s ease-in-out;
+    text-transform: capitalize;
+}
+
+.card:hover .footer {
+    bottom: 10px;
+}
+
+.info {
+    position: absolute;
+    background-color: cadetblue;
+    padding: 15px;
+    border-radius: 20px;
+    left: -60px;
+    bottom: 10px;
+    opacity: 0.8;
+    transition: left 0.3s ease-in-out;
+    text-transform: capitalize;
+}
+
+.card:hover .info {
+    left: 10px;
+}
+
+.titolo1:hover,
+.titolo2:hover,
+.info:hover,
+.footer:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.overlay {
+    position: absolute;
+    background-color: black;
+    border-radius: 20px;
+    opacity: 0.5;
+    width: 400px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
